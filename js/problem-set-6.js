@@ -11,7 +11,12 @@
  */
 
 function sayHello() {
+  let canvas = document.getElementById("canvas1");
+  const context = canvas.getContext('2d');
 
+  context.clearRect(0, 0, canvas.width, canvas.height);
+  context.font = "30px Arial";
+  context.strokeText("Hello World",10,50);
 }
 
 /*
@@ -38,8 +43,41 @@ function sayHello() {
  */
 
 function drawRectangle() {
-
+  while(true) {
+    prompt("Enter your height.");
+    let recheight = "height()"
+    if (recheight < 1) {
+      prompt("Your height is too small.");
+      break;
+    }
+  }
 }
+
+while(true) {
+  prompt("Enter your width.");
+  if (recwidth < 1) {
+    prompt("Your width is too small.");
+  }
+}
+
+while(true) {
+  prompt("Enter your x-coordinate.");
+  if (rectangle.x < 1) {
+    prompt("Your x-coordinate is too small.");
+  }
+}
+
+while(true) {
+  prompt("Enter your y-coordinate.");
+  if (rectangle.y < 1) {
+    prompt("Your y-coordinate is too small.");
+  }
+}
+
+let rectangle = document.getElementById("canvas2");
+
+
+
 
 /*
  * Color. 3 points.
