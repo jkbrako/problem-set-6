@@ -55,6 +55,7 @@ function drawRectangle() {
 
 while(true) {
   prompt("Enter your width.");
+  let recwidth = w
   if (recwidth < 1) {
     prompt("Your width is too small.");
   }
