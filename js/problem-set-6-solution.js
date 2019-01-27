@@ -86,7 +86,7 @@ function drawColoredRectangle() { // decalared fuction 'drawColoredRectangle()'
 
 function drawTriangle() { // decalared fuction 'drawTriangle()'
   let c = document.getElementById("canvas4"); //initialize and declare variable 'c' to display in 4th assignment box
-  let ctx = c.getContext("2d"); //initialize and declare variable 'ctx' to be able to draw in the assignment box by 2 dimensions
+  let ctx = c.getContext("2d"); // initialize and declare variable 'ctx' to be able to draw in the assignment box by 2 dimensions
   ctx.clearRect(0, 0, c.width, c.height); //to clear specified pixels of rectangle of x & y-position at 0 while the 
                                           //width & height are based on 'c'
 
@@ -167,12 +167,12 @@ function drawSmileyFace() { // decalared fuction 'draw SmileyFace()'
     ctx.moveTo(faceX + radius - radius * 0.3, faceY); // move to mouth
     ctx.arc(faceX, faceY, radius * 0.7, 0, Math.PI, false); // draw the mouth
     ctx.moveTo(faceX - radius * 0.35 + radius * 0.1, faceY - radius * 0.5); // move to left eye
-    ctx.arc(faceX - radius * 0.35, faceY - radius * 0.5, radius * 0.1, 0, Math.PI * 2, true); // left eye
+    ctx.arc(faceX - radius * 0.35, faceY - radius * 0.5, radius * 0.1, 0, Math.PI * 2, true); // draw the left eye
     ctx.moveTo(faceX + radius * 0.35 + radius * 0.1, faceY - radius * 0.5); // move to right eye
-    ctx.arc(faceX + radius * 0.35, faceY - radius * 0.5, radius * 0.1, 0, Math.PI * 2, true);  // right eye
+    ctx.arc(faceX + radius * 0.35, faceY - radius * 0.5, radius * 0.1, 0, Math.PI * 2, true);  // draw the right eye
 
-    ctx.closePath();  //to create a path from the current point back to the starting point. Needed to close face 
-    ctx.stroke(); //to actually draw the face
+    ctx.closePath();  // to create a path from the current point back to the starting point. Needed to close face 
+    ctx.stroke(); // to actually draw the face
   }
 }
 
@@ -281,12 +281,12 @@ function drawStopSign() { // decalared fuction 'drawStopSign()'
  */
 
 function drawPyramid() {  // decalared fuction 'drawPyramid()'
-  let c = document.getElementById("canvas8"); //initialize and declare variable 'c' to display in 8th assignment box
-  let ctx = c.getContext("2d"); //initialize and declare variable 'ctx' to be able to draw in the assignment box by 2 dimensions
-  ctx.clearRect(0, 0, c.width, c.height); //to clear specified pixels of rectangle of x & y-position at 0 while the 
-                                          //width & height are based on 'c'
+  let c = document.getElementById("canvas8"); // initialize and declare variable 'c' to display in 8th assignment box
+  let ctx = c.getContext("2d"); // initialize and declare variable 'ctx' to be able to draw in the assignment box by 2 dimensions
+  ctx.clearRect(0, 0, c.width, c.height); // to clear specified pixels of rectangle of x & y-position at 0 while the 
+                                          // width & height are based on 'c'
 
-  let length = Number(prompt("Length: "));  //initialize and declare variable 'length' as a number prompt for the user asking "Length:"
+  let length = Number(prompt("Length: "));  // initialize and declare variable 'length' as a number prompt for the user asking "Length:"
 
   if (Number.isNaN(length)) {         // if statement states that if the 'number' inputted is not-a-number for length then...
     alert("Your input is not a number."); // browser will display an alert to the user that "Your input is not a number."
