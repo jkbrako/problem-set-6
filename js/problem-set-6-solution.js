@@ -7,11 +7,11 @@ function sayHello() { // decalared fuction 'sayHello()'
   let ctx = c.getContext("2d"); //initialize and declare variable 'ctx' to be able to draw in the assignment box by 2 dimensions
   
 
-  ctx.clearRect(0, 0, c.width, c.height); //to clear specified pixels of rectangle of x & y-position at 0 while the 
-                                          //width & height are based on 'c'
-  ctx.font = "48px sans-serif"; //set's font style of ctx 2-D figure
-  ctx.strokeText("Hello, World!", 10, 50);  //assignment box displays through 'ctx' "Hello, World!", from x-position: 10 
-                                            //and y-position: 50
+  ctx.clearRect(0, 0, c.width, c.height); // to clear specified pixels of rectangle of x & y-position at 0 while the 
+                                          // width & height are based on 'c'
+  ctx.font = "48px sans-serif"; // set's font style of ctx 2-D figure
+  ctx.strokeText("Hello, World!", 10, 50);  // assignment box displays through 'ctx' "Hello, World!", from x-position: 10 
+                                            // and y-position: 50
 }
 
 /*
@@ -19,15 +19,15 @@ function sayHello() { // decalared fuction 'sayHello()'
  */
 
 function drawRectangle() {  // decalared fuction 'drawRectangle()'
-  let height = Number(prompt("Height: ")); //initialize and declare variable 'height' as a prompt for the user asking "Height:"
-  let width = Number(prompt("Width: "));  //initialize and declare variable 'width' as a prompt for the user asking "Width:"
-  let x = Number(prompt("X: "));          //initialize and declare variable 'x' as a prompt for the user asking "X:" (x-position)
-  let y = Number(prompt("Y: "));          //initialize and declare variable 'x' as a prompt for the user asking "X:" (x-position)
+  let height = Number(prompt("Height: ")); // initialize and declare variable 'height' as a prompt for the user asking "Height:"
+  let width = Number(prompt("Width: "));  // initialize and declare variable 'width' as a prompt for the user asking "Width:"
+  let x = Number(prompt("X: "));          // initialize and declare variable 'x' as a prompt for the user asking "X:" (x-position)
+  let y = Number(prompt("Y: "));          // initialize and declare variable 'x' as a prompt for the user asking "X:" (x-position)
 
-  let c = document.getElementById("canvas2"); //initialize and declare variable 'c' to display in 2nd assignment box
-  let ctx = c.getContext("2d");               //initialize and declare variable 'ctx' to be able to draw in the assignment box by 2 dimensions
-  ctx.clearRect(0, 0, c.width, c.height); //to clear specified pixels of rectangle of x & y-position at 0 while the 
-                                          //width & height are based on 'c'
+  let c = document.getElementById("canvas2"); // initialize and declare variable 'c' to display in 2nd assignment box
+  let ctx = c.getContext("2d");               // initialize and declare variable 'ctx' to be able to draw in the assignment box by 2 dimensions
+  ctx.clearRect(0, 0, c.width, c.height); // to clear specified pixels of rectangle of x & y-position at 0 while the 
+                                          // width & height are based on 'c'
 
   if (Number.isNaN(height) || Number.isNaN(width) || Number.isNaN(x) || Number.isNaN(y)) {  // if the input of the 
                                                                                             // height, width, x, OR y is not a number then...
@@ -393,14 +393,14 @@ function drawHouse() {  // decalared fuction 'drawHouse()'
     ctx.fillRect(c.width / 2 - 50, (c.height / 5) * 4 - 9, 100, 150); // used to define where the "gold" will be on door
     ctx.beginPath();  // to create a new path for the drawing 'ctx'
     ctx.moveTo(c.width / 2 - 50, (c.height / 5) * 4 - 9); //goes to next position on door
-    ctx.lineTo(c.width / 2 + 50, (c.height / 5) * 4 - 9); // draws line for set position
-    ctx.lineTo(c.width / 2 + 50, c.height - 10);  // draws line for set position
-    ctx.lineTo(c.width / 2 - 50, c.height - 10);  // draws line for set position
-    ctx.lineTo(c.width / 2 - 50, (c.height / 5) * 4 - 9); // draws line for set position
+    ctx.lineTo(c.width / 2 + 50, (c.height / 5) * 4 - 9); // draws line for set position on door
+    ctx.lineTo(c.width / 2 + 50, c.height - 10);  // draws line for set position on door
+    ctx.lineTo(c.width / 2 - 50, c.height - 10);  // draws line for set position on door
+    ctx.lineTo(c.width / 2 - 50, (c.height / 5) * 4 - 9); // draws line for set position on door
     ctx.moveTo(c.width / 2 + 42, (c.height / 5) * 4 - 9 + 80);  // goes to next position on door
     ctx.arc(c.width / 2 + 35, (c.height / 5) * 4 - 9 + 80, 7, 0, Math.PI * 2, true);  // creates curve for doorknob with defined parameters
     ctx.fillStyle = door; //drawing of 'ctx' will be filled in with the color of whatever "door" is
-    ctx.fill();   //to fill the drawing
+    ctx.fill();   // to fill the drawing
     
     ctx.moveTo(c.width / 2 - 50, (c.height / 5) * 4 - 9); //goes to next position on door (again)
     ctx.lineTo(c.width / 2 + 50, (c.height / 5) * 4 - 9); // draws line for set position (again)
@@ -410,7 +410,7 @@ function drawHouse() {  // decalared fuction 'drawHouse()'
     ctx.moveTo(c.width / 2 + 42, (c.height / 5) * 4 - 9 + 80);  // goes to next position on door (again)
     ctx.arc(c.width / 2 + 35, (c.height / 5) * 4 - 9 + 80, 7, 0, Math.PI * 2, true);  // creates curve for doorknob with defined parameters (again)
     
-    ctx.stroke();     //to actually draw the path on the canvas
+    ctx.stroke();     // to actually draw the path on the canvas
 
     // draw windows
     ctx.fillStyle = "lightBlue";  //.fillStyle of 'ctx' is used to fill the drawing in the color "lightBlue"
